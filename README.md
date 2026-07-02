@@ -4,14 +4,41 @@ An enterprise-grade, secure multi-agent RAG (Retrieval-Augmented Generation) pla
 
 Built as a final-year engineering architecture project, this platform allows medical professionals to securely upload clinical trial documents and query them using locally embedded vector search, ensuring zero data leakage and high-accuracy retrieval.
 
-## 🚀 Technical Architecture
+### System Data Flow
 
-This project is built using a modern decoupled architecture:
-
-* **Frontend:** Next.js (React), Tailwind CSS, Axios
-* **Backend:** FastAPI (Python), SQLite
-* **Authentication:** JWT (JSON Web Tokens), bcrypt password hashing
-* **AI & RAG Pipeline:** LangChain, ChromaDB (Local Vector Store), Hugging Face (`sentence-transformers`)
+```mermaid
+graph TD
+    %% User & Frontend
+    U[Researcher] -->|Logs in & Queries| FE[Next.js Frontend]
+    
+    %% Backend & Security
+    FE -->|JWT Authenticated API Call| API[FastAPI Backend]
+    
+    %% Database routing
+    API -->|Verifies Credentials| SQL[(SQLite users.db)]
+    
+    %% RAG Pipeline
+    API -->|Routes Query| RAG[LangChain Pipeline]
+    
+    %% Embedding & Retrieval
+    RAG -->|1. Embeds Query| HF[Hugging Face Models]
+    HF -->|2. Vector Search| CHROMA[(ChromaDB Local Vector Store)]
+    CHROMA -->|3. Returns Top Medical Context| RAG
+    
+    %% LLM Generation
+    RAG -->|4. Context + Query| LLM[Large Language Model]
+    LLM -->|5. Grounded Medical Answer| FE
+    
+    %% Styling
+    classDef frontend fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff;
+    classDef backend fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff;
+    classDef database fill:#f59e0b,stroke:#b45309,stroke-width:2px,color:#fff;
+    classDef ai fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:#fff;
+    
+    class FE frontend;
+    class API,RAG backend;
+    class SQL,CHROMA database;
+    class HF,LLM ai;
 
 ## ✨ Key Features
 
