@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 # MedIntel AI 🧬
 
 An enterprise-grade, secure multi-agent RAG (Retrieval-Augmented Generation) platform designed for clinical medical research and document analysis. 
