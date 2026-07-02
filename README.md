@@ -39,6 +39,8 @@ graph TD
     class API,RAG backend;
     class SQL,CHROMA database;
     class HF,LLM ai;
+```
+
 
 ## ✨ Key Features
 
