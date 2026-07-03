@@ -82,7 +82,7 @@ sequenceDiagram
 ## 🚀 Quick Start
 ```bash
 # 1. Clone repository
-git clone [https://github.com/yourusername/MedIntel-AI.git](https://github.com/aakruthi22/MedIntel-AI.git)
+git clone [https://github.com/aakruthi22/MedIntel-AI.git](https://github.com/aakruthi22/MedIntel-AI.git)
 
 # 2. Setup Backend
 cd backend
