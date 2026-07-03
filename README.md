@@ -82,7 +82,7 @@ sequenceDiagram
 ## 🚀 Quick Start
 ```bash
 # 1. Clone repository
-git clone [https://github.com/yourusername/MedIntel-AI.git](https://github.com/yourusername/MedIntel-AI.git)
+git clone [https://github.com/yourusername/MedIntel-AI.git](https://github.com/aakruthi22/MedIntel-AI.git)
 
 # 2. Setup Backend
 cd backend
@@ -101,9 +101,9 @@ npm run dev
 If you use MedIntel AI in your research, please cite:
 ```bibtex
 @software{MedIntelAI2026,
-  author = {Your Name},
+  author = {Aakruthi Rao},
   title = {MedIntel AI: Secure Clinical RAG Architecture},
   year = {2026},
-  url = {[https://github.com/yourusername/MedIntel-AI](https://github.com/yourusername/MedIntel-AI)}
+  url = {[https://github.com/yourusername/MedIntel-AI](https://github.com/aakruthi22/MedIntel-AI)}
 }
 ```
